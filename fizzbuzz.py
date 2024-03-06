@@ -1,9 +1,16 @@
-for x in range(1,101):
-    if(x%3 == 0 and x%5 == 0):
-        print("FizzBuzz")
-    elif(x%3 == 0):
-        print("Fizz")
-    elif(x%5 == 0):
-        print("Buzz")
-    else:
-        print(x)
+nums = []
+
+for x in range(0,101):
+    nums.append(x)
+
+for x in range(0, len(nums), 3):
+    nums[x] = "Fizz"
+
+for x in range(0, len(nums), 5):
+    nums[x] = "Buzz"
+
+for x in range(0, len(nums), 15):
+    nums[x] = "FizzBuzz"
+
+for x in nums:
+    print(x)
